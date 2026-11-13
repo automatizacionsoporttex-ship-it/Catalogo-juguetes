@@ -22,10 +22,15 @@
 
   --animate-subir: subir 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
   --animate-aparecer: aparecer 0.2s ease-out;
+  --animate-flotar: flotar 5s ease-in-out infinite alternate;
 
   @keyframes subir {
     from { transform: translateY(24px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes flotar {
+    from { transform: translateY(6px); }
+    to { transform: translateY(-8px); }
   }
   @keyframes aparecer {
     from { opacity: 0; }

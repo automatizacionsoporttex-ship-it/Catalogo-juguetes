@@ -4,7 +4,7 @@
  */
 export const tienda = {
   /** Nombre del negocio. Si se deja vacío, el encabezado muestra solo "Catálogo de juguetes". */
-  nombre: "",
+  nombre: "Soporttex",
   tituloCatalogo: "Catálogo de juguetes",
   descripcion:
     "Mira nuestro catálogo de juguetes y haz tu pedido por WhatsApp en segundos.",
@@ -14,9 +14,16 @@ export const tienda = {
   whatsappVisible: "+57 314 269 3617",
 
   hero: {
-    antetitulo: "Catálogo 2026",
-    titulo: "Juguetes que hacen sonreír",
-    subtitulo: "Elige tu favorito y pídelo por WhatsApp.",
+    antetitulo: "Especial de Navidad",
+    titulo: "En Soporttex tenemos los mejores",
+    /** Parte final del título, resaltada en color. */
+    tituloResaltado: "adornos navideños",
+    subtitulo: "Faroles, trenes y carros con luz LED para llenar tu casa de Navidad. Toca uno para conocerlo.",
+    boton: "Ver adornos",
+    /** Categoría que se abre al tocar el botón de la portada ("todos" para ver todo). */
+    botonCategoria: "navidad",
+    /** Códigos de los 3 productos que se muestran en la portada (deben tener foto). */
+    destacados: ["T02", "F01", "C03"],
   },
 
   mensajes: {

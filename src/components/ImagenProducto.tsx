@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { Producto } from "@/lib/tipos";
 
-/** Fondos suaves que se alternan entre tarjetas; lucen bien con fotos sin fondo. */
+/** Fondos suaves para los productos que aún no tienen foto. Las fotos van sobre blanco. */
 const FONDOS = [
   "from-sky-100 to-cyan-50",
   "from-amber-100 to-orange-50",
@@ -24,7 +24,9 @@ type Props = {
 export function ImagenProducto({ producto, indice, sizes, grande, prioridad }: Props) {
   return (
     <div
-      className={`relative aspect-square w-full overflow-hidden bg-gradient-to-br ${FONDOS[indice % FONDOS.length]}`}
+      className={`relative aspect-square w-full overflow-hidden ${
+        producto.imagen ? "bg-white" : `bg-gradient-to-br ${FONDOS[indice % FONDOS.length]}`
+      }`}
     >
       {producto.imagen ? (
         <Image
@@ -33,7 +35,7 @@ export function ImagenProducto({ producto, indice, sizes, grande, prioridad }: P
           fill
           sizes={sizes}
           priority={prioridad}
-          className="object-contain p-3 drop-shadow-[0_10px_12px_rgb(23_63_95/0.22)]"
+          className="object-contain"
         />
       ) : (
         <span
