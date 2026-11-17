@@ -6,6 +6,7 @@ import { tienda } from "@/config/tienda";
 import type { Categoria, Producto } from "@/lib/tipos";
 import { enlaceWhatsApp, formatoPrecio, normalizar } from "@/lib/utilidades";
 import { FichaProducto } from "./FichaProducto";
+import { FondoNavidad } from "./FondoNavidad";
 import { IconoBuscar, IconoCerrar, IconoWhatsApp } from "./Iconos";
 import { TarjetaProducto } from "./TarjetaProducto";
 
@@ -66,11 +67,8 @@ export function Catalogo({ productos, categorias }: Props) {
     <>
       {/* Portada */}
       <section className="relative overflow-hidden bg-marino text-white">
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-          <div className="absolute -left-24 -top-24 size-80 rounded-full bg-cian/15 blur-3xl" />
-          <div className="absolute -right-20 bottom-0 size-[28rem] rounded-full bg-cian/25 blur-3xl" />
-        </div>
-        <div className="relative mx-auto grid max-w-6xl items-center gap-6 px-4 pb-16 pt-8 sm:pb-20 md:grid-cols-[1fr_1.05fr] md:gap-10 md:pt-12">
+        <FondoNavidad />
+        <div className="relative mx-auto grid max-w-6xl items-center gap-6 px-4 pb-16 pt-14 sm:pb-20 md:grid-cols-[1fr_1.05fr] md:gap-10 md:pt-16">
           <div>
             <p className="text-xs font-extrabold uppercase tracking-[0.25em] text-cian">
               {tienda.hero.antetitulo}

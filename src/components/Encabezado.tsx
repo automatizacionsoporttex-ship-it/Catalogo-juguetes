@@ -16,15 +16,8 @@ export function Encabezado() {
             priority
             className="size-11 shrink-0 rounded-full ring-2 ring-white/15"
           />
-          <span className="min-w-0 leading-tight">
-            {tienda.nombre && (
-              <span className="block truncate text-xs font-semibold uppercase tracking-widest text-cian">
-                {tienda.nombre}
-              </span>
-            )}
-            <span className="block truncate font-display text-lg font-semibold">
-              {tienda.tituloCatalogo}
-            </span>
+          <span className="min-w-0 truncate font-display text-lg font-semibold leading-tight">
+            {tienda.tituloCatalogo}
           </span>
         </a>
         <a

@@ -23,6 +23,17 @@
   --animate-subir: subir 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
   --animate-aparecer: aparecer 0.2s ease-out;
   --animate-flotar: flotar 5s ease-in-out infinite alternate;
+  --animate-nevar: nevar 14s linear infinite;
+  --animate-titilar: titilar 2.6s ease-in-out infinite alternate;
+
+  @keyframes nevar {
+    from { transform: translate3d(0, 0, 0); }
+    to { transform: translate3d(var(--deriva, 0px), 820px, 0); }
+  }
+  @keyframes titilar {
+    0%, 40% { opacity: 1; }
+    100% { opacity: 0.45; }
+  }
 
   @keyframes subir {
     from { transform: translateY(24px); opacity: 0; }
